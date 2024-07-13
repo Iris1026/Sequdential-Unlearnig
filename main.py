@@ -7,6 +7,7 @@ from utils import CustomResNet, load_datasets, create_pseudo_labels, hessian_vec
 from parameters import args_parser
 
 
+
 def sequential_unlearning(train_dataset, T, eta, alpha, batch_size, epochs, num_classes):
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
     model = CustomResNet(num_classes=num_classes).to(device)
